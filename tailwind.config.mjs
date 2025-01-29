@@ -8,8 +8,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        black: "#000000",
+        coal: "#0B0E11",
+        darkGrey: "#182226",
+        lightGrey: "#808080",
+        white: "#ffffff",
+        gold: "#A26100",
+        lightGold: "#E3C08D",
+      },
+      fontFamily: {
+        outfit: "Outfit",
       },
     },
   },
