@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/components/**/*.{js,jsx}", "./src/app/**/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {
@@ -12,12 +8,12 @@ export default {
         coal: "#0B0E11",
         darkGrey: "#182226",
         lightGrey: "#808080",
-        white: "#ffffff",
+        white: "#f5f5f5",
         gold: "#A26100",
         lightGold: "#E3C08D",
       },
-      fontFamily: {
-        outfit: "Outfit",
+      screens: {
+        xl: "1920px",
       },
     },
   },

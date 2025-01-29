@@ -1,3 +1,4 @@
+import Discover from "@/components/discover/Discover";
 import Hero from "@/components/hero/Hero";
 export const metadata = {
   title: "Exotic Indian Eats",
@@ -8,6 +9,7 @@ const Home = () => {
     <>
       <main>
         <Hero />
+        <Discover />
       </main>
     </>
   );

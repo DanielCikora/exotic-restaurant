@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "./normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,18 +13,46 @@
 }
 body {
   font-family: "Outfit", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
 }
 .wrapper {
-  max-width: 1210px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 25px;
 }
-.wrapper-lg {
-  max-width: 100%;
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .wrapper {
+    max-width: 1500px;
+  }
+}
+/* Cool underline for the hover */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #a26100;
+  transition: all 0.3s ease-in-out;
+}
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
+.hover-underline-animation.left::after {
+  transform-origin: bottom right;
+}
+.hover-underline-animation.left:hover::after {
+  transform-origin: bottom left;
 }
