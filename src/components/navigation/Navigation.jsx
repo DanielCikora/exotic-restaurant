@@ -12,6 +12,9 @@ const Navigation = () => {
       document.body.style.overflowY = newState ? "hidden" : "scroll";
       return newState;
     });
+    if (window.scrollY) {
+      window.scroll(0, 0);
+    }
   };
   const handleOutsideClick = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -50,10 +53,8 @@ const Navigation = () => {
   ];
   return (
     <nav
-      className={`navigation fixed ${
-        isScrolled
-          ? "md:py-[4px] py-[2px] md:bg-white"
-          : "md:py-[38px] py-[2px] md:bg-transparent"
+      className={`navigation fixed bg-white bg-opacity-80 ${
+        isScrolled ? "md:py-[4px] py-[2px]" : "md:py-[38px] py-[2px]"
       } w-full top-0 left-0 z-[9999]`}
     >
       <div className='wrapper'>
@@ -94,7 +95,7 @@ const Navigation = () => {
             </ul>
           </div>
           <button
-            className='open-sidebar md:hidden flex justify-center items-center flex-col gap-1.5 bg-white h-12 w-12 rounded-full'
+            className='open-sidebar md:hidden flex justify-center items-center flex-col gap-1.5'
             type='button'
             onClick={toggleMenuOpen}
           >

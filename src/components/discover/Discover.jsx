@@ -34,11 +34,10 @@ const Discover = () => {
       className: "box-a",
     },
   ];
-
   return (
-    <section className='discover-section bg-coal min-h-dvh py-16'>
+    <section className='discover-section bg-coal min-h-dvh pt-24 pb-16'>
       <div className='wrapper'>
-        <div className='flex flex-col items-center text-center mb-[100px]'>
+        <div className='flex flex-col items-center text-center md:mb-[200px] mb-[120px]'>
           <img
             className='block h-auto w-full xl:max-w-[200px] max-w-[112px] mb-8'
             src='/images/discover-text-image.png'
@@ -48,20 +47,23 @@ const Discover = () => {
             Our Specialist Cuisine
           </h2>
         </div>
-        <div className='discover-content justify-center w-full h-fit grid gap-4 md:grid-cols-2 grid-cols-1'>
+        <div className='discover-content place-items-center w-full h-fit grid gap-5 md:grid-cols-2 grid-cols-1'>
           {boxContent.map(({ id, title, className, paragraph, icon }) => (
             <div
               key={id}
-              className={`discover-box flex gap-4 bg-darkGrey max-w-[570px] w-full max-h-[200px] h-full px-8 py-6 ${className}`}
+              className={`discover-box flex gap-4 bg-darkGrey lg:max-w-full md:max-w-[570px] w-full max-h-fit h-full sm:px-8 px-4 sm:py-6 py-2 ${className}`}
             >
-              <div className='w-full h-full md:max-w-[60px] xl:max-w-[100px]'>
+              <div className='w-full sm:block hidden h-full md:max-w-[60px] xl:max-w-[100px]'>
                 <img className='block w-full h-auto' src={icon} alt='food' />
               </div>
-              <div className='flex flex-col gap-2'>
+              <div className='flex flex-col sm:items-start items-center sm:gap-5 gap-2'>
                 <h3 className='font-semibold text-lightGold xl:text-[32px] md:text-[22px] text-[18px]'>
                   {title}
                 </h3>
-                <p className='text-lightGrey xl:text-[24px] md:text-[16px]'>
+                <div className='w-full sm:hidden block h-full max-w-20'>
+                  <img className='block w-full h-auto' src={icon} alt='food' />
+                </div>
+                <p className='text-lightGrey sm:text-left text-center xl:text-[20px] md:text-[16px]'>
                   {paragraph}
                 </p>
               </div>
