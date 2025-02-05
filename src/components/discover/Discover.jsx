@@ -61,7 +61,11 @@ const Discover = () => {
                   {title}
                 </h3>
                 <div className='w-full sm:hidden block h-full max-w-20'>
-                  <img className='block w-full h-auto' src={icon} alt='food' />
+                  <img
+                    className='food-icon block w-full h-auto'
+                    src={icon}
+                    alt='food'
+                  />
                 </div>
                 <p className='text-lightGrey sm:text-left text-center xl:text-[20px] md:text-[16px]'>
                   {paragraph}
