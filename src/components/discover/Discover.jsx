@@ -37,7 +37,7 @@ const Discover = () => {
   return (
     <section className='discover-section bg-coal min-h-dvh pt-24 pb-16'>
       <div className='wrapper'>
-        <div className='flex flex-col items-center text-center md:mb-[200px] mb-[120px]'>
+        <div className='flex flex-col items-center text-center xl:mb-[200px] md:mb-[100px] mb-[120px]'>
           <img
             className='block h-auto w-full xl:max-w-[200px] max-w-[112px] mb-8'
             src='/images/discover-text-image.png'
