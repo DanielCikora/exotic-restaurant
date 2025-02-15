@@ -1,0 +1,44 @@
+/* [project]/src/components/history/history.css [app-client] (css) */
+.chairs-table-image__container {
+  position: relative;
+  overflow: hidden;
+}
+
+.chairs-table-image__container:before {
+  position: absolute;
+  content: "";
+  background: #0d1518;
+  height: 100px;
+  width: 100px;
+  display: block;
+  rotate: 45deg;
+}
+
+.chairs-table-image__container--1:before {
+  top: -50px;
+  right: -50px;
+}
+
+.chairs-table-image__container--2:before {
+  bottom: -50px;
+  left: -50px;
+}
+
+.history-about {
+  position: relative;
+  overflow: hidden;
+}
+
+.history-about:before {
+  position: absolute;
+  content: "";
+  background: #0d1518;
+  height: 100px;
+  width: 100px;
+  display: block;
+  rotate: 45deg;
+  top: -50px;
+  right: -50px;
+}
+
+/*# sourceMappingURL=src_components_history_history_b52d8e.css.map*/

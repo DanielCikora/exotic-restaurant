@@ -1,0 +1,55 @@
+/* [project]/src/components/discover/discover.css [app-client] (css) */
+.discover-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.box-a:after {
+  position: absolute;
+  content: "";
+  display: block;
+  background: #0b0e11;
+  width: 40px;
+  height: 40px;
+  left: -20px;
+  top: -20px;
+  rotate: 45deg;
+}
+
+.box-a:before {
+  position: absolute;
+  content: "";
+  display: block;
+  background: #0b0e11;
+  width: 40px;
+  height: 40px;
+  right: -20px;
+  bottom: -20px;
+  rotate: 45deg;
+}
+
+.box-b:after {
+  position: absolute;
+  content: "";
+  display: block;
+  background: #0b0e11;
+  width: 40px;
+  height: 40px;
+  right: -20px;
+  top: -20px;
+  rotate: 45deg;
+}
+
+.box-b:before {
+  position: absolute;
+  content: "";
+  display: block;
+  background: #0b0e11;
+  width: 40px;
+  height: 40px;
+  left: -20px;
+  bottom: -20px;
+  rotate: 45deg;
+}
+
+/*# sourceMappingURL=src_components_discover_discover_b52d8e.css.map*/
