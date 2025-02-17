@@ -1,3 +1,4 @@
+import Demo from "@/components/demo/Demo";
 import Discover from "@/components/discover/Discover";
 import Hero from "@/components/hero/Hero";
 import History from "@/components/history/History";
@@ -12,6 +13,7 @@ const Home = () => {
         <Hero />
         <Discover />
         <History />
+        <Demo />
       </main>
     </>
   );

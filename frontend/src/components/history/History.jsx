@@ -27,7 +27,7 @@ const History = () => {
               src='/images/about-us-text.png'
               alt='about-us-text'
             />
-            <h3 className='font-semibold xl:text-5xl md:text-4xl text-3xl  mb-4'>
+            <h3 className='font-semibold xl:text-5xl md:text-4xl text-3xl sm:text-left text-center mb-4'>
               Our Story Makes History
             </h3>
             <p className='text-md mb-6'>
