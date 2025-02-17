@@ -28,13 +28,16 @@ const Navigation = ()=>{
             document.body.style.overflowY = newState ? "hidden" : "scroll";
             return newState;
         });
-        if (window.scrollY) {
-            window.scroll(0, 0);
-        }
     };
     const handleOutsideClick = (event)=>{
         if (menuRef.current && !menuRef.current.contains(event.target)) {
             setMenuOpen(false);
+        }
+    };
+    const handleLinkClick = ()=>{
+        setMenuOpen(false);
+        if (window.scrollY > 0) {
+            window.scrollTo(0, 0);
         }
     };
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
@@ -114,12 +117,12 @@ const Navigation = ()=>{
                             alt: "logo"
                         }, void 0, false, {
                             fileName: "[project]/src/components/navigation/Navigation.jsx",
-                            lineNumber: 65,
+                            lineNumber: 68,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/navigation/Navigation.jsx",
-                        lineNumber: 64,
+                        lineNumber: 67,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -135,20 +138,20 @@ const Navigation = ()=>{
                                         className: "block bg-black rounded h-[3px] w-[34px] rotate-[45deg] -translate-x-[3px] translate-y-[1px]"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/navigation/Navigation.jsx",
-                                        lineNumber: 82,
+                                        lineNumber: 85,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "block bg-black rounded h-[3px] w-[34px] -rotate-[45deg] -translate-x-[3px] -translate-y-[8px]"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/navigation/Navigation.jsx",
-                                        lineNumber: 83,
+                                        lineNumber: 86,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/navigation/Navigation.jsx",
-                                lineNumber: 77,
+                                lineNumber: 80,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -156,27 +159,27 @@ const Navigation = ()=>{
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                             className: "navigation-link hover-underline-animation hover:text-gold md:py-3 py-1",
                                             href: href,
-                                            onClick: ()=>setMenuOpen(false),
+                                            onClick: handleLinkClick,
                                             children: text
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/navigation/Navigation.jsx",
-                                            lineNumber: 88,
+                                            lineNumber: 91,
                                             columnNumber: 19
                                         }, this)
                                     }, id, false, {
                                         fileName: "[project]/src/components/navigation/Navigation.jsx",
-                                        lineNumber: 87,
+                                        lineNumber: 90,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/navigation/Navigation.jsx",
-                                lineNumber: 85,
+                                lineNumber: 88,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/navigation/Navigation.jsx",
-                        lineNumber: 71,
+                        lineNumber: 74,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -188,43 +191,43 @@ const Navigation = ()=>{
                                 className: "block bg-black rounded h-[3px] w-[34px]"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/navigation/Navigation.jsx",
-                                lineNumber: 104,
+                                lineNumber: 107,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "block bg-black rounded h-[3px] w-[34px]"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/navigation/Navigation.jsx",
-                                lineNumber: 105,
+                                lineNumber: 108,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "block bg-black rounded h-[3px] w-[34px]"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/navigation/Navigation.jsx",
-                                lineNumber: 106,
+                                lineNumber: 109,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/navigation/Navigation.jsx",
-                        lineNumber: 99,
+                        lineNumber: 102,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/navigation/Navigation.jsx",
-                lineNumber: 63,
+                lineNumber: 66,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/navigation/Navigation.jsx",
-            lineNumber: 62,
+            lineNumber: 65,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/navigation/Navigation.jsx",
-        lineNumber: 55,
+        lineNumber: 58,
         columnNumber: 5
     }, this);
 };

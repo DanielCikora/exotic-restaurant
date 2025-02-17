@@ -2,6 +2,8 @@
 .chairs-table-image__container {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: auto;
 }
 
 .chairs-table-image__container:before {
@@ -20,7 +22,7 @@
 }
 
 .chairs-table-image__container--2:before {
-  bottom: -50px;
+  bottom: 0;
   left: -50px;
 }
 
@@ -39,6 +41,12 @@
   rotate: 45deg;
   top: -50px;
   right: -50px;
+}
+
+@media only screen and (width <= 1024px) {
+  .chairs-table-image__container:before, .history-about:before {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=src_components_history_history_b52d8e.css.map*/

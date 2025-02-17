@@ -12,13 +12,16 @@ const Navigation = () => {
       document.body.style.overflowY = newState ? "hidden" : "scroll";
       return newState;
     });
-    if (window.scrollY) {
-      window.scroll(0, 0);
-    }
   };
   const handleOutsideClick = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
       setMenuOpen(false);
+    }
+  };
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+    if (window.scrollY > 0) {
+      window.scrollTo(0, 0);
     }
   };
   useEffect(() => {
@@ -88,7 +91,7 @@ const Navigation = () => {
                   <Link
                     className='navigation-link hover-underline-animation hover:text-gold md:py-3 py-1'
                     href={href}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={handleLinkClick}
                   >
                     {text}
                   </Link>

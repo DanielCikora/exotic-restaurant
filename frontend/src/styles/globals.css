@@ -30,6 +30,10 @@ body {
     max-width: 1500px;
   }
 }
+p {
+  text-align: justify;
+  letter-spacing: -0.05em;
+}
 /* Cool underline for the hover */
 .hover-underline-animation {
   display: inline-block;

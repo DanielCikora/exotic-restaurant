@@ -51,7 +51,7 @@ const Discover = () => {
           {boxContent.map(({ id, title, className, paragraph, icon }) => (
             <div
               key={id}
-              className={`discover-box flex gap-4 bg-darkGrey lg:max-w-full md:max-w-[570px] w-full max-h-fit h-full sm:px-8 px-4 sm:py-6 py-2 ${className}`}
+              className={`discover-box flex gap-4 bg-darkGrey lg:max-w-full md:max-w-[570px] w-full max-h-fit h-full sm:px-8 px-6 sm:py-8 py-2 ${className}`}
             >
               <div className='w-full sm:block hidden h-full md:max-w-[60px] xl:max-w-[100px]'>
                 <img className='block w-full h-auto' src={icon} alt='food' />
@@ -67,7 +67,7 @@ const Discover = () => {
                     alt='food'
                   />
                 </div>
-                <p className='text-lightGrey sm:text-left text-center xl:text-[20px] md:text-[16px]'>
+                <p className='text-lightGrey xl:text-[20px] md:text-[16px]'>
                   {paragraph}
                 </p>
               </div>
