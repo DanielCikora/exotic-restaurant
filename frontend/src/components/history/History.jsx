@@ -5,7 +5,7 @@ const History = () => {
     <section className='history-section bg-ash min-h-dvh pt-[160px] pb-[100px]'>
       <div className='wrapper'>
         <div className='history-content lg:flex-row flex-col h-full flex items-center justify-between w-full'>
-          <div className='flex sm:flex-row flex-col w-full lg:gap-6 gap-[20px] lg:p-0 p-[20px] bg-white'>
+          <div className='flex sm:flex-row flex-col w-full lg:gap-6 gap-[20px] lg:p-0 p-[20px] lg:bg-transparent bg-white'>
             <div className='chairs-table-image__container chairs-table-image__container--1'>
               <img
                 className='history-image__tables-1 block w-full h-auto'
