@@ -90,8 +90,10 @@ __turbopack_esm__({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$toastify$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react-toastify/dist/index.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/axios/lib/axios.js [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -107,13 +109,11 @@ const Reservation = ()=>{
     const handleSubmit = async (event)=>{
         event.preventDefault();
         try {
-            const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post("http://localhost:5000/reservations", formData, {
+            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post("http://localhost:5000/reservations", formData, {
                 headers: {
                     "Content-Type": "application/json"
                 }
             });
-            console.log("Response: ", response);
-            console.log("Data sent to BE: ", formData);
             setFormData({
                 name: "",
                 email: "",
@@ -122,9 +122,9 @@ const Reservation = ()=>{
                 date: "",
                 time: ""
             });
-            console.log("Data sent to BE: ", formData);
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$toastify$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].success("Reservation Created Successfully. Please check your Email for confirmation.");
         } catch (error) {
-            console.error(error);
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$toastify$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].error(error);
         }
     };
     const handleChange = (event)=>{
@@ -135,26 +135,30 @@ const Reservation = ()=>{
             }));
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: "bg-[#0B1315] bg-opacity-70 py-20",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "wrapper",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
+                className: "reservation-form bg-gold p-6 flex flex-col gap-2",
                 onSubmit: handleSubmit,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                        className: "block border border-solid border-black rounded py-2 px-2",
+                        className: "block border border-solid border-black py-2 px-2",
                         type: "text",
                         name: "name",
+                        placeholder: "Reservation name",
                         value: formData.name,
                         onChange: handleChange
                     }, void 0, false, {
                         fileName: "[project]/src/components/reservation/Reservation.jsx",
-                        lineNumber: 52,
+                        lineNumber: 51,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                        className: "block border border-solid border-black rounded py-2 px-2",
+                        className: "block border border-solid border-black py-2 px-2",
                         type: "text",
                         name: "email",
+                        placeholder: "Reservation Email Address",
                         value: formData.email,
                         onChange: handleChange
                     }, void 0, false, {
@@ -163,47 +167,50 @@ const Reservation = ()=>{
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                        className: "block border border-solid border-black rounded py-2 px-2",
+                        className: "block border border-solid border-black py-2 px-2",
                         type: "tel",
                         name: "phoneNumber",
+                        placeholder: "Reservation Phone Number",
                         value: formData.phoneNumber,
                         onChange: handleChange
                     }, void 0, false, {
                         fileName: "[project]/src/components/reservation/Reservation.jsx",
-                        lineNumber: 66,
+                        lineNumber: 67,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                        className: "block border border-solid border-black rounded py-2 px-2",
+                        className: "block border border-solid border-black py-2 px-2",
                         type: "number",
                         name: "guests",
+                        maxLength: 2,
+                        placeholder: "Reservation Guests Number",
                         value: formData.guests,
                         onChange: handleChange
                     }, void 0, false, {
                         fileName: "[project]/src/components/reservation/Reservation.jsx",
-                        lineNumber: 73,
+                        lineNumber: 75,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                        className: "block border border-solid border-black rounded py-2 px-2",
+                        className: "block border border-solid border-black py-2 px-2",
                         type: "date",
                         name: "date",
                         value: formData.date,
                         onChange: handleChange
                     }, void 0, false, {
                         fileName: "[project]/src/components/reservation/Reservation.jsx",
-                        lineNumber: 80,
+                        lineNumber: 84,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                        className: "block border border-solid border-black rounded py-2 px-2",
+                        className: "block border border-solid border-black py-2 px-2",
                         type: "time",
                         name: "time",
                         value: formData.time,
                         onChange: handleChange
                     }, void 0, false, {
                         fileName: "[project]/src/components/reservation/Reservation.jsx",
-                        lineNumber: 87,
+                        lineNumber: 91,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -212,23 +219,23 @@ const Reservation = ()=>{
                         children: "BOOK NOW"
                     }, void 0, false, {
                         fileName: "[project]/src/components/reservation/Reservation.jsx",
-                        lineNumber: 94,
+                        lineNumber: 98,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/reservation/Reservation.jsx",
-                lineNumber: 51,
+                lineNumber: 47,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/reservation/Reservation.jsx",
-            lineNumber: 50,
+            lineNumber: 46,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/reservation/Reservation.jsx",
-        lineNumber: 49,
+        lineNumber: 45,
         columnNumber: 5
     }, this);
 };

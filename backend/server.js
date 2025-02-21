@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 const mongoose = require("mongoose");
-
+const dayjs = require("dayjs");
 const app = express();
 
 const PORT = process.env.PORT || 5000;
@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 app.use(
   cors({
     origin: "http://localhost:3000",
-    methods: ["GET", "POST"],
+    methods: "POST",
     allowedHeaders: ["Content-Type"],
   })
 );
@@ -45,13 +45,15 @@ const transporter = nodemailer.createTransport({
 app.post("/reservations", async (req, res) => {
   const { name, email, phoneNumber, guests, date, time } = req.body;
   try {
+    const formattedDate = dayjs(date).format("DD-MM-YYYY");
+    const formattedTime = dayjs(time).format("HH:mm A");
     const newReservation = new Reservation({
       name,
       email,
       phoneNumber,
       guests,
-      date,
-      time,
+      date: formattedDate,
+      time: formattedTime,
     });
     await newReservation.save();
 
@@ -59,23 +61,32 @@ app.post("/reservations", async (req, res) => {
       from: process.env.EMAIL_USER,
       to: email,
       subject: "Reservation Confirmation",
-      text: `Hello ${name}, your reservation for ${guests} guests on ${date} at ${time} is confirmed.`,
-    };
+      html: `<h1>Dear <strong>Guest</strong></h1>
+      
+      <h2>Thank you for your reservation at our Exotic Indian Eats!</h2>
+      
+      <h3><strong>Here are your reservation details:</strong></h3>
+      <ul>
+      <li>Name: <strong>${name}</strong></li>
+      <li>Guests: <strong>${guests}</strong></li>
+      <li>Date: <strong>${formattedDate}</strong></li>
+      <li>Time: <strong>${formattedTime}</strong></li>
+      <li>Contact Email: <strong>${email}</strong></li>
+      <li>Phone Number: <strong>${phoneNumber}</strong></li>
+      </ul>
 
+
+      <p>If you need to make any changes or have any questions, feel free to reach out.  We look forward to serving you!</p>
+
+
+      <p>Best regards,</p>  
+      <p><strong>Exotic Indian Eats</strong></p>`,
+    };
     await transporter.sendMail(mailOptions);
     res.status(200).json({ message: "Reservation confirmed!" });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Server Error" });
-  }
-});
-app.get("/reservations", async (req, res) => {
-  try {
-    const reservations = await Reservation.find();
-    res.status(200).json(reservations);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Server error" });
   }
 });
 

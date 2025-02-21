@@ -1,0 +1,19 @@
+/* [project]/src/components/reservation/reservation.css [app-client] (css) */
+.reservation-form {
+  position: relative;
+  overflow: hidden;
+}
+
+.reservation-form:before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 50px;
+  rotate: 45deg;
+  background-color: #0b1315;
+  display: block;
+}
+
+/*# sourceMappingURL=src_components_reservation_reservation_b52d8e.css.map*/
