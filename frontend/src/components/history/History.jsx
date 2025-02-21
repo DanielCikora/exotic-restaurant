@@ -2,7 +2,7 @@ import Link from "next/link";
 import "./history.css";
 const History = () => {
   return (
-    <section className='history-section bg-ash min-h-dvh pt-[160px] pb-[100px]'>
+    <section className='history-section bg-ash md:py-56 py-20'>
       <div className='wrapper'>
         <div className='history-content lg:flex-row flex-col h-full flex items-center justify-between w-full'>
           <div className='flex sm:flex-row flex-col w-full lg:gap-6 gap-[20px] lg:p-0 p-[20px] lg:bg-transparent bg-white'>
@@ -30,7 +30,7 @@ const History = () => {
             <h3 className='font-semibold xl:text-5xl md:text-4xl text-3xl sm:text-left text-center mb-4'>
               Our Story Makes History
             </h3>
-            <p className='text-md mb-6'>
+            <p className='text-lg mb-6'>
               Rooted in tradition, our journey began with a deep passion for
               Indian cuisine. We honor centuries-old recipes, blending aromatic
               spices with fresh ingredients to craft dishes that tell a story.

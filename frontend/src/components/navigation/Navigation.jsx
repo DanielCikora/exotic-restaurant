@@ -58,8 +58,8 @@ const Navigation = () => {
     <nav
       className={`navigation fixed w-full top-0 left-0 z-[9999] transition-all duration-300 ease-in-out ${
         isScrolled
-          ? "md:py-[4px] py-[2px] bg-white bg-opacity-80"
-          : "md:py-[38px] py-[2px] md:bg-transparent"
+          ? "md:py-[4px] py-[4px] bg-white bg-opacity-80"
+          : "md:py-[38px] py-[4px] md:bg-transparent"
       }`}
     >
       <div className='wrapper'>

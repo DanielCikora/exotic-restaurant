@@ -77,14 +77,14 @@ const Reservation = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$x$2d$date$2d$pickers$2f$LocalizationProvider$2f$LocalizationProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LocalizationProvider"], {
         dateAdapter: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$x$2d$date$2d$pickers$2f$AdapterDayjs$2f$AdapterDayjs$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AdapterDayjs"],
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-            className: "reservation bg-[#0B1315] py-32",
+            className: "reservation bg-[#0B1315] md:py-32 py-12",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "wrapper",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "reservation-content flex md:flex-row flex-col justify-between gap-20",
+                    className: "reservation-content flex md:flex-row flex-col justify-between md:gap-20 gap-10",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "reservation-text w-full",
+                            className: "reservation-text w-full flex flex-col md:items-start items-center",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                     className: "block w-full h-auto max-w-52 mb-12",
@@ -96,7 +96,7 @@ const Reservation = ()=>{
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "text-4xl font-semibold text-white mb-10",
+                                    className: "text-4xl font-semibold text-white mb-10 md:text-left text-center",
                                     children: "Feel the Flavor with Your Reservation"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/reservation/Reservation.jsx",
@@ -118,7 +118,7 @@ const Reservation = ()=>{
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                            className: "reservation-form w-full items-center text-white bg-gold py-10 px-12 flex flex-col gap-2",
+                            className: "reservation-form w-full items-center text-white bg-gold md:py-10 py-4 lg:px-12 px-4 flex flex-col gap-2",
                             onSubmit: handleSubmit,
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -178,7 +178,7 @@ const Reservation = ()=>{
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex sm:flex-row flex-col gap-2 mb-8",
+                                    className: "flex md:flex-row flex-col gap-2 mb-8 w-full",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$x$2d$date$2d$pickers$2f$DatePicker$2f$DatePicker$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DatePicker"], {
                                             placeholder: "Pick a Date",
@@ -204,6 +204,9 @@ const Reservation = ()=>{
                                                 "& input": {
                                                     color: "white",
                                                     paddingLeft: "16px"
+                                                },
+                                                "& .MuiButtonBase-root": {
+                                                    color: "white"
                                                 }
                                             }
                                         }, void 0, false, {
@@ -227,11 +230,17 @@ const Reservation = ()=>{
                                                 "& input": {
                                                     color: "white",
                                                     paddingLeft: "16px"
+                                                },
+                                                "& .MuiButtonBase-root": {
+                                                    color: "white"
+                                                },
+                                                "& .MuiOutlinedInput-input": {
+                                                    color: "white"
                                                 }
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/reservation/Reservation.jsx",
-                                            lineNumber: 151,
+                                            lineNumber: 154,
                                             columnNumber: 17
                                         }, this)
                                     ]
@@ -241,12 +250,12 @@ const Reservation = ()=>{
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "p-3 w-full max-w-[200px] font-semibold bg-white text-lightGold",
+                                    className: "p-4 w-full md:max-w-[200px] max-w-full font-semibold bg-white text-lightGold",
                                     type: "submit",
                                     children: "BOOK NOW"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/reservation/Reservation.jsx",
-                                    lineNumber: 170,
+                                    lineNumber: 179,
                                     columnNumber: 15
                                 }, this)
                             ]

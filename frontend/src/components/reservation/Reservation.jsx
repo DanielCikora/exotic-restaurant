@@ -60,16 +60,16 @@ const Reservation = () => {
   const currentDate = dayjs();
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <section className='reservation bg-[#0B1315] py-32'>
+      <section className='reservation bg-[#0B1315] md:py-32 py-12'>
         <div className='wrapper'>
-          <div className='reservation-content flex md:flex-row flex-col justify-between gap-20'>
-            <div className='reservation-text w-full'>
+          <div className='reservation-content flex md:flex-row flex-col justify-between md:gap-20 gap-10'>
+            <div className='reservation-text w-full flex flex-col md:items-start items-center'>
               <img
                 className='block w-full h-auto max-w-52 mb-12'
                 src='/images/reservation-text.png'
                 alt='reservation-text'
               />
-              <h2 className='text-4xl font-semibold text-white mb-10'>
+              <h2 className='text-4xl font-semibold text-white mb-10 md:text-left text-center'>
                 Feel the Flavor with Your Reservation
               </h2>
               <p className='text-lg text-white font-normal'>
@@ -83,7 +83,7 @@ const Reservation = () => {
               </p>
             </div>
             <form
-              className='reservation-form w-full items-center text-white bg-gold py-10 px-12 flex flex-col gap-2'
+              className='reservation-form w-full items-center text-white bg-gold md:py-10 py-4 lg:px-12 px-4 flex flex-col gap-2'
               onSubmit={handleSubmit}
             >
               <h3 className='text-3xl font-semibold text-center mb-6'>
@@ -121,7 +121,7 @@ const Reservation = () => {
                 value={formData.guests}
                 onChange={handleChange}
               />
-              <div className='flex sm:flex-row flex-col gap-2 mb-8'>
+              <div className='flex md:flex-row flex-col gap-2 mb-8 w-full'>
                 <DatePicker
                   placeholder='Pick a Date'
                   value={formData.date}
@@ -146,6 +146,9 @@ const Reservation = () => {
                       color: "white",
                       paddingLeft: "16px",
                     },
+                    "& .MuiButtonBase-root": {
+                      color: "white",
+                    },
                   }}
                 />
                 <TimePicker
@@ -164,11 +167,17 @@ const Reservation = () => {
                       color: "white",
                       paddingLeft: "16px",
                     },
+                    "& .MuiButtonBase-root": {
+                      color: "white",
+                    },
+                    "& .MuiOutlinedInput-input": {
+                      color: "white",
+                    },
                   }}
                 />
               </div>
               <button
-                className='p-3 w-full max-w-[200px] font-semibold bg-white text-lightGold'
+                className='p-4 w-full md:max-w-[200px] max-w-full font-semibold bg-white text-lightGold'
                 type='submit'
               >
                 BOOK NOW
