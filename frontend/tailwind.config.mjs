@@ -14,6 +14,7 @@ export default {
         lightGold: "#E3C08D",
       },
       screens: {
+        mediumLarge: "1200px",
         xl: "1920px",
       },
     },

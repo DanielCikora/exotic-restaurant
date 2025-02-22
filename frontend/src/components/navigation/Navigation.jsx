@@ -58,7 +58,7 @@ const Navigation = () => {
     <nav
       className={`navigation fixed w-full top-0 left-0 z-[9999] transition-all duration-300 ease-in-out ${
         isScrolled
-          ? "md:py-[4px] py-[4px] bg-white bg-opacity-80"
+          ? "md:py-[4px] py-[4px] bg-white bg-opacity-90"
           : "md:py-[38px] py-[4px] md:bg-transparent"
       }`}
     >
