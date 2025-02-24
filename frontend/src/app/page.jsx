@@ -5,6 +5,7 @@ import History from "@/components/history/History";
 import Menu from "@/components/menu/Menu";
 import Offers from "@/components/offers/Offers";
 import Reservation from "@/components/reservation/Reservation";
+import Testimonials from "@/components/testimonials/Testimonials";
 export const metadata = {
   title: "Exotic Indian Eats",
   description: "Exotic Indian Eats - Website Developed by Daniel Cikora",
@@ -19,6 +20,7 @@ const Home = () => {
       <Menu />
       <Offers />
       <Reservation />
+      <Testimonials />
     </main>
   );
 };
