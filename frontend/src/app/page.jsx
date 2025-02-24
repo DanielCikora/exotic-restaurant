@@ -3,6 +3,7 @@ import Discover from "@/components/discover/Discover";
 import Hero from "@/components/hero/Hero";
 import History from "@/components/history/History";
 import Menu from "@/components/menu/Menu";
+import Offers from "@/components/offers/Offers";
 import Reservation from "@/components/reservation/Reservation";
 export const metadata = {
   title: "Exotic Indian Eats",
@@ -16,6 +17,7 @@ const Home = () => {
       <History />
       <Demo />
       <Menu />
+      <Offers />
       <Reservation />
     </main>
   );

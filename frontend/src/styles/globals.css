@@ -60,3 +60,19 @@ p {
 .hover-underline-animation.left:hover::after {
   transform-origin: bottom left;
 }
+/* I can use this to cut the corner of Images */
+.right-angle-cut {
+  position: relative;
+  overflow: hidden;
+}
+.right-angle-cut::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  display: block;
+  width: 100px;
+  rotate: 45deg;
+  height: 100px;
+  background-color: #0b0e11;
+}

@@ -9,6 +9,8 @@ export default {
         ash: "#0D1518",
         darkGrey: "#182226",
         lightGrey: "#808080",
+        secondGrey: "#959595",
+        matteGrey: "#4E4F51",
         white: "#f5f5f5",
         gold: "#A26100",
         lightGold: "#E3C08D",

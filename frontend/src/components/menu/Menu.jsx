@@ -67,7 +67,7 @@ const Menu = () => {
       </div>
       <img
         src='/icons/angled-turn-lines.svg'
-        className='mediumLarge:block hidden absolute z-10 right-28 bottom-48'
+        className='mediumLarge:block hidden absolute z-10 xl:right-36 right-28 bottom-48'
         alt='angled-bars'
       />
     </section>
