@@ -11,7 +11,7 @@ const Newsletter = () => {
     };
     try {
       await axios.post(
-        "http://localhost:5000/newsletter",
+        "https://exotic-restaurant-tzp1.vercel.app/newsletter",
         formattedEmail,
         {
           headers: {

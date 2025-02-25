@@ -23,7 +23,7 @@ const Reservation = () => {
     const formattedTime = formData.time.format("HH:mm A");
     try {
       await axios.post(
-        "http://localhost:5000/reservations",
+        "https://exotic-restaurant-tzp1.vercel.app/reservations",
         {
           ...formData,
           date: formattedDate,

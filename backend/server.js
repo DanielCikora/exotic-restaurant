@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://exotic-restaurant-tzp1.vercel.app/",
     methods: ["POST"],
     allowedHeaders: ["Content-Type"],
   })
