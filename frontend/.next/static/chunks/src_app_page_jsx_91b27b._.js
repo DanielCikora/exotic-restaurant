@@ -15,8 +15,8 @@
     "static/chunks/node_modules_@mui_x-date-pickers_344dea._.js",
     "static/chunks/node_modules_@popperjs_core_lib_b9b8df._.js",
     "static/chunks/node_modules_swiper_ccc115._.js",
-    "static/chunks/node_modules_160087._.js",
-    "static/chunks/src_536f46._.js"
+    "static/chunks/node_modules_6119c6._.js",
+    "static/chunks/src_ab266d._.js"
   ],
   "source": "dynamic"
 });

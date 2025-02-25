@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 app.use(
   cors({
     origin: "http://localhost:3000",
-    methods: "POST",
+    methods: ["POST"],
     allowedHeaders: ["Content-Type"],
   })
 );
@@ -41,7 +41,7 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS,
   },
 });
-
+// I can use this for Reservations
 app.post("/reservations", async (req, res) => {
   const { name, email, phoneNumber, guests, date, time } = req.body;
   try {
@@ -89,5 +89,35 @@ app.post("/reservations", async (req, res) => {
     res.status(500).json({ message: "Server Error" });
   }
 });
+// I can use this for Newsletter Subscription
+app.post("/newsletter", async (req, res) => {
+  const { newsletterEmail } = req.body;
+  try {
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: newsletterEmail,
+      subject: "Newsletter Confirmation",
+      html: `<h1>Dear <strong>Guest</strong></h1>
+      <h2>Thank you for your newsletter subscription at our Exotic Indian Eats!</h2>
 
+
+      <h3><strong>Here are your newsletter details:</strong></h3>
+      <ul>
+      <li>Contact Email: <strong>${newsletterEmail}</strong></li>
+      </ul>
+
+
+      <p>If you need to make any changes or have any questions, feel free to reach out.  We look forward to hearing from you!</p>
+
+
+      <p>Best regards,</p>  
+      <p><strong>Exotic Indian Eats</strong></p>`,
+    };
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ message: "Newsletter confirmed!" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server Error" });
+  }
+});
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

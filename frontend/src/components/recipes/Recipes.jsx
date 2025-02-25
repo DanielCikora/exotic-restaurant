@@ -28,7 +28,7 @@ const Recipes = () => {
   return (
     <section className='recipes relative bg-coal md:py-44 py-28'>
       <img
-        className='block absolute top-0 md:right-0 right-1 rotate-90 w-full h-auto md:max-w-52 max-w-32'
+        className='block absolute top-0 right-1 rotate-90 w-full h-auto md:max-w-52 max-w-32'
         src='/icons/angled-turn-lines.svg'
         alt='lines'
       />

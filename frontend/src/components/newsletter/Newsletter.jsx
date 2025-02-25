@@ -1,6 +1,31 @@
-import CTA from "../ui/CTA";
-
+"use client";
+import axios from "axios";
+import { useState } from "react";
+import { toast } from "react-toastify";
 const Newsletter = () => {
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const handleNewsletterSubmit = async (event) => {
+    event.preventDefault();
+    const formattedEmail = {
+      newsletterEmail: newsletterEmail,
+    };
+    try {
+      await axios.post(
+        "http://localhost:5000/newsletter",
+        formattedEmail,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        },
+        console.log(formattedEmail)
+      );
+      setNewsletterEmail("");
+      toast.success("Successfully Subscribed to Newspaper!");
+    } catch (error) {
+      toast.error("Error Submitting Email to Newspaper: ", error);
+    }
+  };
   return (
     <section className='bg-ash md:py-36 py-24 relative'>
       <img
@@ -24,11 +49,15 @@ const Newsletter = () => {
             <input
               className='block text-white placeholder:text-white py-4 px-4 border bg-transparent border-solid border-white w-full'
               type='email'
+              name='email'
+              onChange={(event) => setNewsletterEmail(event.target.value)}
+              value={newsletterEmail}
               placeholder='Your Email'
             />
             <button
-              className='block w-full sm:max-w-[200px] max-w-full py-4 px-4 bg-lightGold text-white'
+              className='block w-full font-semibold sm:max-w-[200px] max-w-full py-4 px-4 bg-lightGold hover:bg-white hover:text-black text-white transition-all duration-200 ease-in-out'
               type='submit'
+              onClick={handleNewsletterSubmit}
             >
               SUBSCRIBE
             </button>
