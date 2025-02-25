@@ -3,7 +3,9 @@ import Discover from "@/components/discover/Discover";
 import Hero from "@/components/hero/Hero";
 import History from "@/components/history/History";
 import Menu from "@/components/menu/Menu";
+import Newsletter from "@/components/newsletter/Newsletter";
 import Offers from "@/components/offers/Offers";
+import Recipes from "@/components/recipes/Recipes";
 import Reservation from "@/components/reservation/Reservation";
 import Testimonials from "@/components/testimonials/Testimonials";
 export const metadata = {
@@ -21,6 +23,8 @@ const Home = () => {
       <Offers />
       <Reservation />
       <Testimonials />
+      <Recipes />
+      <Newsletter />
     </main>
   );
 };
