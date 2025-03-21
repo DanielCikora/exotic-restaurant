@@ -27,7 +27,7 @@ const Newsletter = ()=>{
             newsletterEmail: newsletterEmail
         };
         try {
-            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("http://localhost:5000/newsletter", formattedEmail, {
+            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("https://exotic-restaurant-tzp1.vercel.app/newsletter", formattedEmail, {
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -415,7 +415,7 @@ const Reservation = ()=>{
         const formattedDate = formData.date.format("DD-MM-YYYY");
         const formattedTime = formData.time.format("HH:mm A");
         try {
-            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("http://localhost:5000/reservations", {
+            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("https://exotic-restaurant-tzp1.vercel.app/reservations", {
                 ...formData,
                 date: formattedDate,
                 time: formattedTime
